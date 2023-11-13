@@ -1,0 +1,19 @@
+<div id="divClima">
+    <div *ngIf="!wheatherData.isDay" class="ClimaRow">
+        <i class="fas fa-3x fa-sun sol"></i>
+
+    </div>
+    <div *ngIf="wheatherData.isDay"class="ClimaRow">
+        <i class="fas fa-3x fa-moon luna"></i>
+    
+        </div>
+        <div class="ClimaRow nubediv">
+            <i class="fas fa-cloud fa-3x nube"></i>
+        </div>
+    
+    <div class="ClimaRow" style="font-size: 32px;margin-top: 5px;">{{wheatherData.temp_celcius}}°</div>
+    <div class="ClimaRow" style="font-size: 12px;">{{wheatherData.temp_min}}° / {{wheatherData.temp_max}}°</div>
+
+    <div class="ClimaRow" style="font-size: 25px;margin-top: 10px;">{{wheatherData.name}}</div>
+    <div class="ClimaRow" style="font-size: 12px;">humedad: {{wheatherData.main.humidity}}%</div>
+</div>
